@@ -20,14 +20,14 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/c/ctitv/live)
         EOL
-    - name: Get abcau.m3u8
+    - name: Get ttvnews.m3u8
       run: |
-        touch ./abcau.m3u8
-        sudo cat >./abcau.m3u8 <<EOL
+        touch ./ttvnews.m3u8
+        sudo cat >./ttvnews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=W1ilCy6XrmI)
+        $(youtube-dl -g https://www.youtube.com/c/ttvnewsview/live)
         EOL
     - name: Get abcus.m3u8
       run: |
@@ -99,7 +99,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=V0WxUakDV7M)
+        $(youtube-dl -g https://https://www.youtube.com/c/TVBSNEWS01/live)
         EOL
     - name: Get PTS.m3u8
       run: |
