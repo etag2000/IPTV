@@ -182,6 +182,60 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/watch?v=lu_BJKxqGnk)
         EOL
+    - name: Get gstv.m3u8
+      run: |
+        touch ./gstv.m3u8
+        sudo cat >./gstv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/channel/UCoo-jAsJgM8z09ddlhcBlSA/live)
+        EOL
+    - name: Get parliamentarytv1.m3u8
+      run: |
+        touch ./parliamentarytv1.m3u8
+        sudo cat >./parliamentarytv1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=PQLMD4iHhG8)
+        EOL
+    - name: Get parliamentarytv2.m3u8
+      run: |
+        touch ./parliamentarytv2.m3u8
+        sudo cat >./parliamentarytv2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/c/國會頻道/live)
+        EOL
+    - name: Get abcnewsau.m3u8
+      run: |
+        touch ./abcnewsau.m3u8
+        sudo cat >./abcnewsau.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/user/NewsOnABC/live)
+        EOL
+    - name: Get abcnewsus
+      run: |
+        touch ./abcnewsus.m3u8
+        sudo cat >./abcnewsus.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/user/ABCNews/live)
+        EOL
+    - name: Get abc7news
+      run: |
+        touch ./abc7news.m3u8
+        sudo cat >./abc7news.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/channel/UCq9e_hCv2jvgck8WowW1NXg/live)
+        EOL
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
