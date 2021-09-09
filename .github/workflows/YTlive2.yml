@@ -1,4 +1,4 @@
-name: Get YouTube Live2 m3u8
+name: Get YouTube Live m3u8
 on:
   schedule:
     - cron: "0 */2 * * *"
@@ -11,113 +11,113 @@ jobs:
       run: |
         sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
         sudo chmod a+rx /usr/local/bin/youtube-dl
-   - name: Get ttvnews.m3u8
-     run: |
-        touch ./ttvnews.m3u8
-        sudo cat >./ttvnews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/ttvnewsview/live)
-        EOL
-   - name: Get ftvnews.m3u8
-     run: |
-        touch ./ftvnews.m3u8
-        sudo cat >./ftvnews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/FTVLIVE/live)
-        EOL
-   - name: Get ctsnews.m3u8
-     run: |
-        touch ./ctsnews.m3u8
-        sudo cat >./ctsnews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/華視直播頻道/live)
-        EOL
-   - name: Get ctvnews.m3u8
-     run: |
-        touch ./ctvnews.m3u8
-        sudo cat >./ctvnews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/twctvnews/live)
-        EOL
-   - name: Get tvbsnews.m3u8
-     run: |
-        touch ./tvbsnews.m3u8
-        sudo cat >./tvbsnews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://https://www.youtube.com/c/TVBSNEWS01/live)
-        EOL
-    - name: Get setlive.m3u8
+    - name: Get aljazeera.m3u8
       run: |
-        touch ./setlive.m3u8
-        sudo cat >./setlive.m3u8 <<EOL
+        touch ./aljazeera.m3u8
+        sudo cat >./aljazeera.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/三立LIVE新聞/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=-upyPouRrB8)
         EOL
-    - name: Get setinews.m3u8
+    - name: Get abcau.m3u8
       run: |
-        touch ./setinews.m3u8
-        sudo cat >./setinews.m3u8 <<EOL
+        touch ./abcau.m3u8
+        sudo cat >./abcau.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/setmoney159/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=W1ilCy6XrmI)
         EOL
-    - name: Get ctitv.m3u8
+    - name: Get abcus.m3u8
       run: |
-        touch ./ctitv.m3u8
-        sudo cat >./ctitv.m3u8 <<EOL
+        touch ./abcus.m3u8
+        sudo cat >./abcus.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/ctitv/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=w_Ma8oQLmSM)
         EOL
-    - name: Get ctinews.m3u8
+    - name: Get africanews.m3u8
       run: |
-        touch ./ctinews.m3u8
-        sudo cat >./ctinews.m3u8 <<EOL
+        touch ./africanews.m3u8
+        sudo cat >./africanews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=lu_BJKxqGnk)
+        $(youtube-dl -g https://www.youtube.com/watch?v=NQjabLGdP5g)
         EOL
-    - name: hyxw.m3u8
+    - name: Get Arirang.m3u8
+      run: |
+        touch ./Arirang.m3u8
+        sudo cat >./Arirang.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=52unCHc6AV4)
+        EOL
+    - name: Get DW.m3u8
+      run: |
+        touch ./DW.m3u8
+        sudo cat >./DW.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=4tbh25K-vO8)
+        EOL
+    - name: Get euronews.m3u8
+      run: |
+        touch ./euronews.m3u8
+        sudo cat >./euronews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g --proxy socks4://114.34.115.110:5678/ https://www.youtube.com/watch?v=sPgqEHsONK8)
+        EOL
+    - name: Get france24.m3u8
+      run: |
+        touch ./france24.m3u8
+        sudo cat >./france24.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=aHh8rA0hks8)
+        EOL
+    - name: Get hyxw.m3u8
       run: |
         touch ./hyxw.m3u8
         sudo cat >./hyxw.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/寰宇新聞頻道/live)
+        $(youtube-dl -g https://www.youtube.com/channel/UCp2f7tGJGN6R9Muxipem8Nw/live)
         EOL
-     - name: Get ebcnews.m3u8
+    - name: Get tvbsnews.m3u8
       run: |
-        touch ./ebcnews.m3u8
-        sudo cat >./ebcnews.m3u8 <<EOL
+        touch ./tvbsnews.m3u8
+        sudo cat >./tvbsnews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/newsebc/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=V0WxUakDV7M)
         EOL
-    - name: Get ebcyoyo.m3u8
+    - name: Get PTS.m3u8
       run: |
-        touch ./ebcyoyo.m3u8
-        sudo cat >./ebcyoyo.m3u8 <<EOL
+        touch ./PTS.m3u8
+        sudo cat >./PTS.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/yoyotvebc/live)
+        $(youtube-dl -g --proxy socks4://210.61.216.66:33990/ https://www.youtube.com/watch?v=JAzRXylm3M0)
+        EOL
+    - name: Get parliamentarytv1.m3u8
+      run: |
+        touch ./parliamentarytv1.m3u8
+        sudo cat >./parliamentarytv1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=PQLMD4iHhG8)
         EOL
     - name: Get parliamentarytv2.m3u8
       run: |
