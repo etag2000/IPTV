@@ -11,10 +11,10 @@ jobs:
       run: |
         sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
         sudo chmod a+rx /usr/local/bin/youtube-dl
-    - name: Get ctitv.m3u8.m3u8
+    - name: Get ctitv.m3u8
       run: |
-        touch ./ctitv.m3u8.m3u8
-        sudo cat >./ctitv.m3u8.m3u8 <<EOL
+        touch ./ctitv.m3u8
+        sudo cat >./ctitv.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
