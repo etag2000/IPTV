@@ -1,4 +1,4 @@
-name: Get YouTube Live m3u8
+name: Get YouTube Live2 m3u8
 on:
   schedule:
     - cron: "0 */2 * * *"
@@ -101,7 +101,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/c/寰宇新聞頻道/live)
         EOL
-    - name: Get ebcnews.m3u8
+     - name: Get ebcnews.m3u8
       run: |
         touch ./ebcnews.m3u8
         sudo cat >./ebcnews.m3u8 <<EOL
@@ -119,86 +119,14 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/c/yoyotvebc/live)
         EOL
-    - name: Get ctsshow.m3u8
+    - name: Get parliamentarytv2.m3u8
       run: |
-        touch ./ctsshow.m3u8
-        sudo cat >./ctsshow.m3u8 <<EOL
+        touch ./parliamentarytv2.m3u8
+        sudo cat >./parliamentarytv2.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/TBSCTSSHOW/live)
-        EOL
-    - name: Get daai1.m3u8
-      run: |
-        touch ./daai1.m3u8
-        sudo cat >./daai1.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=oV_i3Hsl_zg)
-        EOL
-    - name: Get daai2.m3u8
-      run: |
-        touch ./daai2.m3u8
-        sudo cat >./daai2.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
-        EOL
-    - name: Get daai3.m3u8
-      run: |
-        touch ./daai3.m3u8
-        sudo cat >./daai3.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(https://www.youtube.com/user/DaAiVideo/live)
-        EOL
-    - name: Get sdtv.m3u8
-      run: |
-        touch ./sdtv.m3u8
-        sudo cat >./sdtv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(https://www.youtube.com/channel/UCrVBXIxpYnjTk4ezn9F-fug/live)
-        EOL
-    - name: Get eftv.m3u8
-      run: |
-        touch ./eftv.m3u8
-        sudo cat >./eftv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/user/EFTV01/live)
-        EOL
-    - name: Get cctv4.m3u8
-      run: |
-        touch ./cctv4.m3u8
-        sudo cat >./cctv4.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/user/ChineseInternatioify/live)
-        EOL
-    - name: Get france24.m3u8
-      run: |
-        touch ./france24.m3u8
-        sudo cat >./france24.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=aHh8rA0hks8)
-        EOL
-    - name: Get france24.m3u8
-      run: |
-        touch ./france24.m3u8
-        sudo cat >./france24.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=aHh8rA0hks8)
+        $(youtube-dl -g https://www.youtube.com/watch?v=T8dcZHk4xWs)
         EOL
     - name : Upload artifact
       uses: actions/upload-artifact@master
