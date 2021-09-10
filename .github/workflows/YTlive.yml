@@ -290,14 +290,23 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
         $(youtube-dl -g https://www.youtube.com/channel/UCcZg5r9hBqK_VPUT2I7eYVw/live)
         EOL
-    - name: Get japanews.news
+            - name: Get japanlive.m3u8
       run: |
-        touch ./japanews.news
-        sudo cat >./japanews.news <<EOL
+        touch ./japanlive.m3u8
+        sudo cat >./japanlive.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
         $(youtube-dl -g https://www.youtube.com/user/ANNnewsCH/live)
+        EOL
+    - name: Get japanews.m3u8
+      run: |
+        touch ./japanews.m3u8
+        sudo cat >./japanews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        $(youtube-dl -g https://www.youtube.com/watch?v=coYw-eVU0Ks)
         EOL
     - name: Get bloombergfinance.m3u8
       run: |
