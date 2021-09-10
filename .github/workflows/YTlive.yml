@@ -515,6 +515,15 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
         $(youtube-dl -g https://www.youtube.com/watch?v=GjWg196TWKM)
         EOL
+    - name: Get mrbean.m3u8
+      run: |
+        touch ./mrbean.m3u8
+        sudo cat >./mrbean.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        $(youtube-dl -g https://www.youtube.com/watch?v=aefHHOUM_ds)
+        EOL
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
