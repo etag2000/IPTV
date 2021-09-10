@@ -263,6 +263,15 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
         $(youtube-dl -g https://www.youtube.com/channel/UC1_E8NeF5QHY2dtdLRBCCLA/live)
         EOL
+    - name: Get arirangtv.m3u8
+      run: |
+        touch ./arirangtv.m3u8
+        sudo cat >./arirangtv.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        $(youtube-dl -g https://www.youtube.com/watch?v=SgScPWFgZWI)
+        EOL
     - name: Get arirangnews.m3u8
       run: |
         touch ./arirangnews.m3u8
@@ -270,7 +279,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
-        $(youtube-dl -g https://www.youtube.com/user/arirangnews/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=u7q0KzudBZo)
         EOL
     - name: Get cna.m3u8
       run: |
@@ -387,7 +396,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
-        $(youtube-dl -g https://www.youtube.com/watch?v=sPgqEHsONK8)
+        $(youtube-dl -g https://www.youtube.com/EuronewsUSA/live)
         EOL
     - name: Get dwnews.m3u8
       run: |
