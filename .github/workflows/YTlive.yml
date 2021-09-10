@@ -92,6 +92,15 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
         $(youtube-dl -g https://www.youtube.com/c/寰宇新聞頻道/live)
         EOL
+    - name: Get tvbs.m3u8
+      run: |
+        touch ./tvbs.m3u8
+        sudo cat >./tvbs.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        $(youtube-dl -g https://https://www.youtube.com/c/TVBSNEWS01/live)
+        EOL
     - name: Get tvbsnews.m3u8
       run: |
         touch ./tvbsnews.m3u8
@@ -99,7 +108,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
-        $(youtube-dl -g https://https://www.youtube.com/c/TVBSNEWS01/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=V0WxUakDV7M)
         EOL
     - name: Get cctv4.m3u8
       run: |
