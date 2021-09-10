@@ -251,4 +251,3 @@ jobs:
         git commit -m "Update YTlive"
         git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
         git push -f -u origin YTlive
-© 2021 GitHub, Inc.
