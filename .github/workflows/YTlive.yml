@@ -125,7 +125,7 @@ jobs:
         sudo cat >./eftv.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/user/EFTV01/live)
         EOL
     - name: Get daai1.m3u8
@@ -161,7 +161,7 @@ jobs:
         sudo cat >./sdtv.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/channel/UCrVBXIxpYnjTk4ezn9F-fug/live)
         EOL
     - name: Get ctsshow.m3u8
@@ -179,7 +179,7 @@ jobs:
         sudo cat >./ebcyoyo.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/c/yoyotvebc/live)
         EOL
     - name: Get ctinews.m3u8
@@ -206,7 +206,7 @@ jobs:
         sudo cat >./parliamentarytv1.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/watch?v=PQLMD4iHhG8)
         EOL
     - name: Get parliamentarytv2.m3u8
@@ -215,7 +215,7 @@ jobs:
         sudo cat >./parliamentarytv2.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/c/國會頻道/live)
         EOL
     - name: Get abcnewsau.m3u8
@@ -305,7 +305,7 @@ jobs:
         sudo cat >./japanlive.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/user/ANNnewsCH/live)
         EOL
     - name: Get japanews.m3u8
@@ -314,7 +314,7 @@ jobs:
         sudo cat >./japanews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/watch?v=coYw-eVU0Ks)
         EOL
     - name: Get bloombergfinance.m3u8
@@ -458,7 +458,7 @@ jobs:
         sudo cat >./birdpark.m3u8 <<EOL
         #EXTM3U_sd
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/watch?v=W4OHCY4sInQ)
         EOL
     - name: Get hitfm.m3u8
@@ -503,7 +503,7 @@ jobs:
         sudo cat >./learnjapanese.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1280000,RESOLUTION=640x360,AUTOPLAY=1
         $(youtube-dl -g https://www.youtube.com/watch?v=7zY3u9kOMbQ)
         EOL
     - name: Get abcsing.m3u8
