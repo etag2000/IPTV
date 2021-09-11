@@ -299,14 +299,14 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/channel/UCcZg5r9hBqK_VPUT2I7eYVw/live)
         EOL
-    - name: Get japanlive.m3u8
+    - name: Get 8tv.m3u8
       run: |
-        touch ./japanlive.m3u8
-        sudo cat >./japanlive.m3u8 <<EOL
+        touch ./8tv.m3u8
+        sudo cat >./8tv.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000,RESOLUTION=640x360,AUTOPLAY=1
-        $(youtube-dl -g https://www.youtube.com/user/ANNnewsCH/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=5wOEA0LiSw4)
         EOL
     - name: Get japanews.m3u8
       run: |
