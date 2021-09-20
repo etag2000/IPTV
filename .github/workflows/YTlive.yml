@@ -517,7 +517,7 @@ jobs:
         EOL
     - name: Get cctv2021maf_live.m3u8
       run: |
-        touch ./lcctv2021maf_live.m3u8
+        touch ./cctv2021maf_live.m3u8
         sudo cat >./cctv2021maf_live.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
@@ -526,7 +526,7 @@ jobs:
         EOL
     - name: Get cctv2021maf.m3u8
       run: |
-        touch ./lcctv2021maf.m3u8
+        touch ./cctv2021maf.m3u8
         sudo cat >./cctv2021maf.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
