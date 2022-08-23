@@ -99,16 +99,16 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/c/TVBSNEWS01/live)
+        $(youtube-dl -g https://www.youtube.com/watch?v=2mCSYvcfhtc)
         EOL
-    - name: Get tvbsnews.m3u8
+    - name: Get ebcfinancialnews.m3u8
       run: |
-        touch ./tvbsnews.m3u8
-        sudo cat >./tvbsnews.m3u8 <<EOL
+        touch ./ebcfinancialnews.m3u8
+        sudo cat >./ebcfinancialnews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/watch?v=V0WxUakDV7M)
+        $(youtube-dl -g https://www.youtube.com/watch?v=ABn_ccXn_jc)
         EOL
     - name: Get cctv4.m3u8
       run: |
@@ -128,23 +128,23 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
         $(youtube-dl -g https://www.youtube.com/user/EFTV01/live)
         EOL
-    - name: Get daai1.m3u8
+    - name: Get mnews.m3u8
       run: |
-        touch ./daai1.m3u8
+        touch ./mnews.m3u8
         sudo cat >./daai1.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/watch?v=oV_i3Hsl_zg)
+        $(youtube-dl -g https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live)
         EOL
-    - name: Get daai2.m3u8
+    - name: Get jingnews.m3u8
       run: |
-        touch ./daai2.m3u8
+        touch ./jingnews.m3u8
         sudo cat >./daai2.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
+        $(youtube-dl -g https://www.youtube.com/watch?v=5n0y6b0Q25o)
         EOL
     - name: Get daai3.m3u8
       run: |
@@ -270,7 +270,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
-        $(youtube-dl -g https://www.youtube.com/watch?v=SgScPWFgZWI)
+        $(youtube-dl -g https://www.youtube.com/user/arirang/live)
         EOL
     - name: Get arirangnews.m3u8
       run: |
@@ -279,7 +279,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=540000
-        $(youtube-dl -g https://www.youtube.com/watch?v=u7q0KzudBZo)
+        $(youtube-dl -g https://www.youtube.com/watch?v=APlvA2wtdKk)
         EOL
     - name: Get cna.m3u8
       run: |
