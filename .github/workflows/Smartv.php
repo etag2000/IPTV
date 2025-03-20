@@ -1,0 +1,102 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+header('Content-Type: application/json;charset=UTF-8');
+date_default_timezone_set("Asia/Shanghai");
+
+$ip = '127.0.0.1';
+$header = [
+    "CLIENT-IP:".$ip,
+    "X-FORWARDED-FOR:".$ip,
+];
+
+$name = isset($GET["id"]) ? preg_replace('/[^a-zA-Z0-9-]/', '', $_GET["id"]) : '';
+$port = '198.16.80.178:8278';
+$nn = msseg($name);
+$ts = isset($_GET["ts"]) ? $_GET["ts"] : null;
+
+$url = "http://".$port."/".$name."/playlist.m3u8?tid={TID}&tsum={TSUM}";
+
+if (strpos($ts, ".ts") !== false) {
+    $ch = curl_init();
+    $msg = $nn . '/' . $name . ".Host";
+    $hots = @file_get_contents($msg);
+    if (!$hots) {
+        die(json_encode(["error" => "Host file not found"]));
+    }
+    $url = $hots . $ts;
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+    $tsData = curl_exec($ch);
+    curl_close($ch);
+
+    if (!$tsData) {
+        die(json_encode(["error" => "Failed to fetch TS segment"]));
+    }
+
+    header("Date: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Content-Type: video/mp2t");
+    header('Content-Length: ' . strlen($tsData));
+    header("Connection: keep-alive");
+    header("Cache-Control: max-age=200");
+    header("Server: TVA Streaming Server v2020 r0222");
+    header("Access-Control-Allow-Origin: *");
+    header("Content-Disposition: attachment; filename=".$name.".ts");
+
+    echo $tsData;
+    exit();
+} function getAddress(field) {
+    const id = getQueryParameter.call({ url: field.url, key: "id" });
+    let url = "http://198.16.100.186:8278/" + id + "/playlist.m3u8";
+    const tid = "m048220304599";
+    const t = String(Math.floor(Date.now() / 150));
+    const tsum = md5.call("tvata nginx auth module" + "/" + id + "/playlist.m3u8" + tid + t);
+    url += "?tid=" + tid + "&" + "ct=" + t + "&tsum=" + tsum;
+    return JSON.stringify({ url: url, headers: { 'CLIENT-IP': '127.0.0.1', 'X-FORWARDED-FOR': '127.0.0.1' } });
+}
+
+    $m3u8s = explode("\n", $m3u8);
+    $m3u8 = '';
+    foreach ($m3u8s as $v) {
+        $v = trim($v);
+        if (strpos($v, ".ts") !== false) {
+            $m3u8 .= "Smartv.php?id=".$name."&ts=".$v."\n";
+        } elseif ($v !== '') {
+            $m3u8 .= $v . "\n";
+        }
+    }
+
+    $msg = $nn . '/' . $name . ".m3u8";
+    if (!file_put_contents($msg, $m3u8)) {
+        die(json_encode(["error" => "Failed to write M3U8 file"]));
+    }
+
+    $msg = $nn . '/' . $name . ".Host";
+    $ser = "http://".$port."/".$name."/";
+    if (!file_put_contents($msg, $ser)) {
+        die(json_encode(["error" => "Failed to write Host file"]));
+    }
+
+    header("Content-Type: application/vnd.apple.mpegurl");
+    header("Server: TVA Streaming Server v2020 r0222");
+    header('Content-Length: ' . strlen($m3u8));
+    header("Content-Disposition: attachment; filename=".$name.".m3u8");
+    
+    echo $m3u8;
+    exit();
+}
+
+function msseg($id) {
+    $baseDir = _DIR_ . '/dl/';
+    $dirPath = $baseDir . $id;
+
+    if (!file_exists($dirPath) && !mkdir($dirPath, 0777, true)) {
+        die(json_encode(["error" => "Failed to create directory"]));
+    }
+
+    return $dirPath . '/';
+}
+?>
